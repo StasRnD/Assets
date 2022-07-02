@@ -1,0 +1,7 @@
+.footer__scroll {
+    margin: 21px auto 0;
+    width: 33%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+}

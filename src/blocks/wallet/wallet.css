@@ -1,0 +1,5 @@
+.wallet {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 23px 16px;
+}

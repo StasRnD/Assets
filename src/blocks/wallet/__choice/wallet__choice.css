@@ -1,0 +1,10 @@
+.wallet__choice {
+    width: 9px;
+    height: 6px;
+    border: none;
+    background: transparent;
+    background-image: url(../../../image/main-icon/wallet-choice-button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5px;
+}

@@ -1,0 +1,9 @@
+.wallet__analysis-icon {
+    width: 16px;
+    height: 16px;
+    border: none;
+    background: transparent;
+    background-image: url(../../../image/main-icon/wallet-analysis-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}

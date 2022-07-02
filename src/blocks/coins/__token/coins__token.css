@@ -1,0 +1,7 @@
+.coins__token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    padding: 8px 0;
+}

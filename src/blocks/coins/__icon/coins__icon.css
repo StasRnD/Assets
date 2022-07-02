@@ -1,0 +1,6 @@
+.coins__icon {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    grid-row: 1 / 3;
+}

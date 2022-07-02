@@ -1,0 +1,14 @@
+.footer__nav-point {
+    align-items: center;
+    padding: 0;
+    padding-bottom: 9px;
+    border: none;
+    background-color: transparent;
+    color: #94A3B8;
+}
+
+.footer__nav-point:hover {
+    color: #2563EB
+    
+}
+

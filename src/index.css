@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(./fonts-inter/inter.css);
+@import url(./blocks/body/body.css);
+@import url(./blocks/header/header.css);
+@import url(./blocks/header/__information-panel/header__information-panel.css);
+@import url(./blocks/header/__time/header__time.css);
+@import url(./blocks/header/__mobile-signal/header__mobile-signal.css);
+@import url(./blocks/header/__wifi/header__wifi.css);
+@import url(./blocks/header/__battery/header__battery.css);
+@import url( ./blocks/main/main.css);
+@import url(./blocks/main/__nav/main__nav.css);
+@import url(./blocks/main/__title/main__title.css);
+@import url(./blocks/main/__help/main__help.css);
+@import url(./blocks/main/__help-icon/main__help-icon.css);
+@import url(./blocks/wallet/wallet.css);
+@import url(./blocks/wallet/__info/wallet__info.css);
+@import url(./blocks/wallet/__active/wallet__active.css);
+@import url(./blocks/wallet/__connect/wallet__connect.css);
+@import url(./blocks/wallet/__title/wallet__title.css);
+@import url(./blocks/wallet/__choice/wallet__choice.css);
+@import url(./blocks/wallet/__analysis/wallet__analysis.css);
+@import url(./blocks/wallet/__analysis-icon/wallet____analysis-icon.css);
+@import url(./blocks/wallet/__analysis-numbers/wallet__analysis-numbers.css);
+@import url(./blocks/wallet/__money/wallet__money.css);
+@import url(./blocks/wallet/__help/wallet__help.css);
+@import url(./blocks/wallet/__help-point/wallet__help-point.css);
+@import url(./blocks/wallet/__point-icon/wallet__point-icon.css);
+@import url(./blocks/wallet/__point-text/wallet__point-text.css);
+@import url(./blocks/coins/coins.css);
+@import url(./blocks/coins/__classify/coins__classify.css);
+@import url(./blocks/coins/__name/coins__name.css);
+@import url(./blocks/coins/__list/coins__list.css);
+@import url(./blocks/coins/__unit/coins__unit.css);
+@import url(./blocks/coins/__currensy/coins__currensy.css);
+@import url(./blocks/coins/__icon/coins__icon.css);
+@import url(./blocks/coins/__amout/coins__amout.css);
+@import url(./blocks/coins/__total-cost/coins__total-cost.css);
+@import url(./blocks/coins/__change/coins__change.css);
+@import url(./blocks/coins/__cost-one/coins__cost-one.css);
+@import url(./blocks/coins/__cost-change/coins__cost-change.css);
+@import url(./blocks/coins/__token/coins__token.css);
+@import url(./blocks/coins/__token-text/coins__token-text.css);
+@import url(./blocks/coins/__token-import/coins__token-import.css);
+@import url(./blocks/footer/footer.css);
+@import url(./blocks/footer/__nav/footer__nav.css);
+@import url(./blocks/footer/__nav-point/footer__nav-poine.css);
+@import url(./blocks/footer/__point-icon/footer__point-icon.css);
+@import url(./blocks/footer/__point-text/footer__point-text.css);
+@import url(./blocks/footer/__scroll/footer__scroll.css);

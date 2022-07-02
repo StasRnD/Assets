@@ -1,0 +1,8 @@
+.coins__classify {
+    margin-top: 16px;
+    display: flex;
+    column-gap: 32px;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 0 23px;
+}
+

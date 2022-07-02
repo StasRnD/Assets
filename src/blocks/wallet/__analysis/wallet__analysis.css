@@ -1,0 +1,8 @@
+.wallet__analysis {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    column-gap: 4px;
+    background-color: #E5E7EB;
+    border-radius: 2px;
+}
