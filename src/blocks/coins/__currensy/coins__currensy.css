@@ -1,6 +1,0 @@
-.coins__currensy {
-    display: grid;
-    grid-template-columns: 35px 1fr;
-    column-gap: 12px;
-    align-items: center;
-}

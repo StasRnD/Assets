@@ -1,69 +1,82 @@
-import { walletHelpPoints, coinsList } from '../utils/constans'
-import message from '../image/main-icon/message-chat.svg'
-import setting from '../image/main-icon/setting.svg'
+import { coinsList } from '../utils/constans'
+import walletChoiceIcon from '../image/main-icon/wallet-choice-button.svg'
+import walletAnalysisIcon from '../image/main-icon/wallet-analysis-icon.svg'
+import send from '../image/main-icon/send.svg'
+import receive from '../image/main-icon/receive.svg'
+import scan from '../image/main-icon/scan.svg'
+import history from '../image/main-icon/history.svg'
+import { Coin } from './Coin'
 
-const Main = () => {
+const Main = ({isForm, setIsForm, setTitleForm}) => {
     const importTokenClick = evt => evt.preventDefault()
+
+    const openForm = (evt) => {
+        setTitleForm(evt.currentTarget.textContent)
+        setIsForm(!isForm)
+    }
     
     return (
-        <main className="main">
-            <div className="main__nav">
-                <h1 className="main__title">Assets Manage</h1>
-                <div className="main__help">
-                    <img src={message} alt="Написать сообщение" className="main__help-icon" />
-                    <img src={setting} alt="Настройки" className="main__help-icon" />
-                </div>
-            </div>
-            <section className="wallet">
-                <div className="wallet__info">
-                    <div className="wallet__active">
-                        <p className="wallet__connect">Connect wallet -</p>
-                        <h2 className="wallet__title">&nbsp;Metamask</h2>
-                        <button className="wallet__choice"></button>
+        <main className='main'>
+            <section className='wallet'>
+                <div className='wallet__info'>
+                    <div className='wallet__active'>
+                        <p className='wallet__connect'>Connect wallet -</p>
+                        <button className='wallet__choice'>
+                            <h2 className='wallet__title'>Metamask</h2>
+                            <img src={walletChoiceIcon} alt='Иконка кнопки выбор кошелька' className='wallet__choice-icon'/>
+                        </button>
                     </div>
-                    <div className="wallet__analysis">
-                        <button className="wallet__analysis-icon" />
-                        <p className="wallet__analysis-numbers">0x59485…82590</p>
-                    </div>
+                    <button className='wallet__analysis'>
+                        <img src={walletAnalysisIcon} alt='Иконка кнопки анализ кошелька' className='walletAnalysisIcon'/>
+                        <p className='wallet__analysis-numbers'>0x59485…82590</p>
+                    </button>
                 </div>
-                <p className="wallet__money">$635,285,84</p>
-                <div className="wallet__help">
-                    {walletHelpPoints.map((point) => {
-                        return (
-                            <div className="wallet__help-point" key={point.number}>
-                                <img src={point.image} alt="" className="wallet__point-icon" />
-                                <p className="wallet__point-text">{point.text}</p>
-                            </div>
-                        )
-                    })}
+                <p className='wallet__money'>$645,231,123</p>
+                <div className='wallet__help'>
+                    <button className='wallet__help-point' onClick={openForm}>
+                        <img src={send} alt='Купить валюту' className='wallet__point-icon' />
+                        Send
+                    </button>
+                    <button className='wallet__help-point' onClick={openForm}>
+                        <img src={receive} alt='Купить валюту' className='wallet__point-icon' />
+                        Receive
+                    </button>
+                    <button className='wallet__help-point'>
+                        <img src={scan} alt='Сканировать' className='wallet__point-icon' />
+                        Scan
+                    </button>
+                    <button className='wallet__help-point'>
+                        <img src={history} alt='История' className='wallet__point-icon' />
+                        History
+                    </button>
+                    
                 </div>
             </section>
-            <section className="coins">
-                <div className="coins__classify">
-                    <button className="coins__name">Coins</button>
-                    <button className="coins__name">NFTs</button>
-                    <button className="coins__name">DeFi</button>
-                </div>
-                <ul className="coins__list">
-                    {coinsList.map((coin) => {
-                        return (
-                            <li className="coins__unit" key={coin.number}>
-                                <div className="coins__currensy">
-                                    <img src={coin.icon} alt="Логотип валюты" className="coins__icon" />
-                                    <p className="coins__amout">{coin.currency}</p>
-                                    <p className="coins__total-cost">{coin.totalCost}</p>
-                                </div>
-                                <div className="coins__change">
-                                    <p className="coins__cost-one">{coin.costOne}</p>
-                                    <p className="coins__cost-change">{coin.costСhange}</p>
-                                </div>
-                            </li>
-                        )
-                    })}
+            <section className='coins'>
+                <ul className='coins__classify'>
+                    <li>
+                        <button className='coins__name'>Coins</button>
+                    </li>
+                    <li>
+                        <button className='coins__name'>NFTs</button>
+                    </li>
+                    <li>
+                        <button className='coins__name'>DeFi</button>
+                    </li>
                 </ul>
-                <div className="coins__token">
-                    <p className="coins__token-text">Don't see your token?</p>
-                    <a href="#" className="coins__token-import" onClick={importTokenClick}>Import Tokens</a>
+                <table className='coins__list'>
+                    <thead>
+                        {coinsList.map((dataCoin) => {
+                            
+                            return (
+                                <Coin key={dataCoin.number} dataCoin={dataCoin}/>
+                            )
+                        })}
+                    </thead>
+                </table>
+                <div className='coins__token'>
+                    <p className='coins__token-text'>Don't see your token?</p>
+                    <a href='#' className='coins__token-import' onClick={importTokenClick}>Import Tokens</a>
                 </div>
             </section>
         </main>
